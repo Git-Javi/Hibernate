@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<table-filter match-catalog="bdalumnoshibernate" match-name="profesor"/>
+<table-filter match-catalog="bdalumnoshibernate" match-name="alumno" />
+	<!-- Código para generar POJO (Alumno) con toString() -->
+	<table catalog="bdalumnoshibernate" name="alumno">
+		<column name="nif">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nombre">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="apellidos">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="sexo">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nota1">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nota2">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+	</table>
+	<!-- Código para generar POJO (Alumno) con con método personalizado() -->
+	<table catalog="bdalumnoshibernate" name="alumno">
+		<meta attribute="class-code">
+			private String calculaApto() {
+				if (nota1 &gt;= 5) {
+					if (nota2 &gt;= 5) {
+						return &quot;Alumno Apto&quot;;
+					} else {
+						return &quot;Alumno NO Apto&quot;;
+					} 
+				} else {
+					return &quot;Alumno NO Apto&quot;;
+				}
+			}
+		</meta>
+	</table>
+	
+	<!-- Código para generar POJO (Profesor) con toString() -->
+	<table catalog="bdalumnoshibernate" name="profesor">
+		<column name="codigo">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nombre">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="apellidos">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="sexo">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="antiguedad">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="rendimiento">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+	</table>
+</hibernate-reverse-engineering>

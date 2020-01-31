@@ -1,0 +1,39 @@
+private String nif;  //(9 carcateres)
+private String nombre; // (15 caracteres)
+private String apellidos// (30 caracteres)
+private char sexo; // (1 caracter)
+private int nota1;
+private int nota2;
+
+-- altas -- 
+controlar que el nif no sea más grande 9
+no permietir que el nombre supere 15 caracteres.
+apellidos no superen los 30 caracteres.
+el sexo que solo admita v o m
+controlar que las notas estén entre 1 y 10 ambas inclusible
+*preguntar si queremos el alta o no (validando solo S o N)
+
+-- bajas -- 
+controlar que el nif no sea más grande 9
+verifique que existe
+si existe visulaiza los datos (con apto o no apto en el caso de q alguna de las notas sea menor de 5)
+confirmar la baja
+
+-- modificación -- 
+controlar que el nif no sea más grande 9
+verifique que existe
+si existe visulaiza los datos (con apto o no apto en el caso de q alguna de las notas sea menor de 5)
+modificar cualquir campo
+si cambiamos los datos *controlar que cambie de apto a no apto y al ervés
+confr5imar la modificación
+
+-- consulta -- 
+controlar que el nif no sea más grande 9
+verifique que existe
+si existe visualiza todos los datos
+
+-- listado -- 
+1 general // sacar cuantos varones y cuantas mujeres se han visulaizado  
+2 por sexo // preguntar si queremos varones o mujeres
+3 volver al menú
+

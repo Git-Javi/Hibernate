@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 29-ene-2020 15:54:29 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="bdalumnoshibernate" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.hibernate.mantenimiento.entidad.Profesor" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="profesor">
+        <id name="codigo" type="int">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column name="codigo"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="nombre" optimistic-lock="true" type="string" unique="false">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column length="15" name="nombre"/>
+        </property>
+        <property generated="never" lazy="false" name="apellidos" optimistic-lock="true" type="string" unique="false">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column length="30" name="apellidos"/>
+        </property>
+        <property generated="never" lazy="false" name="sexo" optimistic-lock="true" type="java.lang.Character" unique="false">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column length="1" name="sexo"/>
+        </property>
+        <property generated="never" lazy="false" name="antiguedad" optimistic-lock="true" type="date" unique="false">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column length="10" name="antiguedad"/>
+        </property>
+        <property generated="never" lazy="false" name="rendimiento" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <meta attribute="use-in-tostring" inherit="false">true</meta>
+            <column name="rendimiento"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<table-filter match-catalog="bdalumnoshibernate" match-name="alumno" />
+	<!-- Código para generar POJO con toString() -->
+	<table catalog="bdalumnoshibernate" name="alumno">
+		<column name="nif">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nombre">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="apellidos">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="sexo">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nota1">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+		<column name="nota2">
+			<meta attribute="use-in-tostring">true</meta>
+		</column>
+	</table>
+	<!-- Código para generar POJO con con método personalizado() -->
+	<table catalog="bdalumnoshibernate" name="alumno">
+		<meta attribute="class-code">
+			private String calculaApto() {
+				if (nota1 &gt;= 5) {
+					if (nota2 &gt;= 5) {
+						return &quot;Alumno Apto&quot;;
+					} else {
+						return &quot;Alumno NO Apto&quot;;
+					} 
+				} else {
+					return &quot;Alumno NO Apto&quot;;
+				}
+			}
+		</meta>
+	</table>
